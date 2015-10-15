@@ -92,34 +92,63 @@
      //    for (i = 0; i < myArr.length; i = i + 2) {
      //      console.log(myArr[i]);
      //    }
-     //
      // }
      // console.assert( splitting("I fox will wolf only apple read wood every duck other silver word"));
 
  // .join()
 
  // .pop()
+    // function popping() {
+    //   var silver =[].slice.call(arguments);
+    //   console.log(silver);
+    //   silver.pop();
+    //   console.log("I removed the last array item ");
+    //   console.log(silver)
+    // };
+    // console.assert( popping(1, 2, 3, 4, 5, 6, "foxy"));
 
-    var silver = [1, 2, 3, 4, 5, 6, "foxy"];
-    console.log(silver);
-    silver.pop();
-    console.log(silver);
 
- // .push()
+ // // .push()
+    //   function ahPushIt() {
+    //    var silver =[].slice.call(arguments);
+     //
+    //    console.log(silver);
+     //
+    //    silver.push("foxy kitten");
+     //
+    //    console.log("I added the last array item ");
+    //    console.log(silver)
+    //  };
+    //  console.assert( ahPushIt(1, 2, 3, 4, 5, 6, "foxy"));
 
-      silver.push("foxy kitten");
-      console.log(silver);
+ // // .slice()
+ //
 
- // .slice()
+ // // .splice()
+ //
 
- // .splice()
 
- // .shift()
-      silver.shift();
-      console.log("removed first array item! " + silver);
- // .unshift()
-      silver.unshift(1);
-      console.log("here I put number 1 back in the first position " + silver);
- // .filter()
+ // // .shift()
+ // function shiftWork() {
+ //   var silver =[].slice.call(arguments);
+ //   console.log(silver);
+ //   silver.shift();
+ //   console.log("I removed the first array item ");
+ //   console.log(silver)
+ // };
+ // console.assert( shiftWork(1, 2, 3, 4, 5, 6, "foxy"));
 
- // .map()
+
+ // // // .unshift()
+ // function notSoShifty() {
+ //   var silver =[].slice.call(arguments);
+ //   console.log(silver);
+ //   silver.unshift("owls ");
+ //   console.log("I added the first array item! ");
+ //   console.log(silver)
+ // };
+ // console.assert( notSoShifty(1, 2, 3, 4, 5, 6, "foxy"));
+
+ // // .filter()
+ //
+ // // .map()
