@@ -1,8 +1,7 @@
-//0.
+0.
 function forEach(array, callback){
   for (i = 0; i < array.length; i++){
     var a = array[i];
-    console.log(a);
     callback(a);
   }
 }
@@ -20,6 +19,7 @@ function sum(){
   for(var i = 0; i < args.length; i++) {
     total = total + args[i];
   }
+  return total
 }
 
 console.assert(sum(1, 2, 3, 4, 5) === 15 )
@@ -34,7 +34,7 @@ function average() {
     sum = sum + args[i];
   }
   var avg = sum / args.length;
-  console.log(avg);
+  return avg;
 }
 
 console.assert( average(2, 4, 6, 8) === 5 )
@@ -48,12 +48,9 @@ function largest() {
       if(args[i] > bigNum) {
         bigNum = args[i];
       }
-      else {
-        bigNum = bigNum;
-      }
-      console.log(bigNum);
-    }
 
+    }
+    return bigNum
 }
 
 console.assert( largest(2, 4, 6, 8) === 8 )
@@ -70,85 +67,111 @@ console.assert( largest(2, 4, 6, 8) === 8 )
      else {
        longString = longString;
      }
-     console.log(longString);
-     console.log(longWord);
+
    }
+return longWord
  }
 
  console.assert( longest("this", "is", "a", "awesome", "function") === "function" );
 
 
+  function compare(thing, secondthing) {
+      if (thing === secondthing) {
+        return true;
+      }
+      else {
+        return false;
+      }
+  };
 
- .sort()
 
- .concat()
 
- .indexOf()
+  function apples(banana, oranges) {
+      if (banana.length === oranges.length) {
+          for (i = 0; i < banana.length; i++) {
+              if (banana[i] === oranges[i]) {
+                  console.log("winning");
+              }else {
+                  return false;
+              }
+          }
+      } else {return false;}
+      return true;
+  }
 
- .split()
 
-     function splitting(fillwords) {
-       myArr = fillwords.split(" ");
-        for (i = 0; i < myArr.length; i = i + 2) {
-          console.log(myArr[i]);
-        }
+
+
+
+console.assert(apples([1, 2, 3, 4],[1, 2, 3, 4]));
+
+  // .sort()
+     console.assert(apples([3, 2, 4, 1].sort(),[1, 2, 3, 4]));
+
+  // .concat()
+     console.assert(apples([3, 2].concat([1, 4]),[3, 2, 1, 4]));
+
+  // .indexOf()
+        console.assert([1, 2, "foxy", 4].indexOf("foxy") === 2);
+
+  // .split()
+  function splitting(fillwords) {
+    banana = fillwords.split(" ");
      }
-     console.assert( splitting("I fox will wolf only apple read wood every duck other silver word"));
+     splitting("I fox will");
+  console.assert(apples( banana, ["I", "fox", "will"]));
 
- .join()
+  // .join()
+      console.assert(["Fish", "dog", "cat"].join(" ")=== "Fish dog cat")
 
- .pop()
-    function popping() {
-      var silver =[].slice.call(arguments);
-      console.log(silver);
-      silver.pop();
-      console.log("I removed the last array item ");
-      console.log(silver)
-    };
-    console.assert( popping(1, 2, 3, 4, 5, 6, "foxy"));
+  // .pop()
+      console.assert([1, 2, 3, 4].pop() === 4);
 
-
- // .push()
-      function ahPushIt() {
-       var silver =[].slice.call(arguments);
-
-       console.log(silver);
-
-       silver.push("foxy kitten");
-
-       console.log("I added the last array item ");
-       console.log(silver)
-     };
-     console.assert( ahPushIt(1, 2, 3, 4, 5, 6, "foxy"));
-
- // .slice()
+  // .push()
+      var red = [1, 2, 3, 4];
+        console.assert(red.push(5) === 5);
 
 
- // .splice()
+  // .slice()
+      var silver = [1, 2, 3, 4, 5, 6, "foxy"];
+      var sver = silver.slice(1,5);
+      console.assert(apples(sver, [2, 3, 4, 5]));
+
+
+  // .splice()
+      var spliceNDice = [1, 2, 3, 4, 5, 6, "foxy"];
+      spliceNDice.splice(6, 1, 7, 8)
+      console.assert(apples(spliceNDice , [1, 2, 3, 4, 5, 6, 7, 8]));
 
 
 
- // .shift()
- function shiftWork() {
-   var silver =[].slice.call(arguments);
-   console.log(silver);
-   silver.shift();
-   console.log("I removed the first array item ");
-   console.log(silver)
- };
- console.assert( shiftWork(1, 2, 3, 4, 5, 6, "foxy"));
+  // .shift()
+
+       var shiftWork =[1, 2, 3, 4, 5, 6, "foxy"];
+       shiftWork.shift();
+       console.assert(apples(shiftWork,[2, 3, 4, 5, 6, "foxy"]));
 
 
- // // .unshift()
- function notSoShifty() {
-   var silver =[].slice.call(arguments);
-   console.log(silver);
-   silver.unshift("owls ");
-   console.log("I added the first array item! ");
-   console.log(silver)
- };
- console.assert( notSoShifty(1, 2, 3, 4, 5, 6, "foxy"));
+  // .unshift()
+      var notSoShifty = [2, 3, 4, 5, 6];
+      notSoShifty.unshift(1);
+      console.assert(apples(notSoShifty, [1, 2, 3, 4, 5, 6]));
 
- // .filter()
- 
- // .map()
+  // .filter()
+        function tooSmall(bed) {
+          if(isNaN(bed)) {
+            return bed
+          }
+        }
+          var goldieLox = [1, 3, "BabyBear", 4, "MamaBear", "PapaBear", 5];
+          var porridge = goldieLox.filter(tooSmall);
+          console.assert(apples(porridge,["BabyBear", "MamaBear", "PapaBear"]));
+
+  // .map()
+        function wording(value) {
+          return value.length
+        }
+       var fruity = ["apple", "orange", "banana"];
+       var letters = fruity.map(wording);
+       console.log("runs the function wording once for each element in the array.");
+       console.assert(apples(letters,[5, 6, 6]));

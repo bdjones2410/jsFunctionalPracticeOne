@@ -13,8 +13,8 @@
 // 0. write your own forEach() that takes two arguments: an array, and a callback
 
 function forEach(array, callback){
-    // YOUR CODE HERE
-
+for (i = 0; i < array.length; i++)
+ var a = array[i];
 }
 
 // testing your code with console.assert
