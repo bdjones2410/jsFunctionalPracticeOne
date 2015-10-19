@@ -83,7 +83,7 @@ return longWord
       }
   };
 
-
+//Thank you Sally for helping me come to this understanding!!
 
   function apples(banana, oranges) {
       if (banana.length === oranges.length) {
