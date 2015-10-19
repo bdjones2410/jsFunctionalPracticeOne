@@ -24,7 +24,6 @@ function sum(){
 
 console.assert(sum(1, 2, 3, 4, 5) === 15 )
 
-
 2.
 
 function average() {
